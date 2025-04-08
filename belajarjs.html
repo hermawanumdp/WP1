@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+</head>
+<body>
+    <h1>Belajar Javascript</h1>
+    <p id="demo">Javascript, dapat digunakan akses content HTML</p>
+
+    <button 
+    onclick='document.getElementById("demo").innerHTML="Hello World"'>
+        Ubah HTML</button>
+
+    <button onclick="ubahCSS()">Ubah CSS</button>
+    <button onclick="hiddenCSS()">HIDDEN</button>
+    <button onclick="visible()">Tampil</button>
+    <br><br>
+    Bil 1 <input type="text" id="bil1">
+    Bil 2 <input type="text" id="bil2">
+    <button onclick="tambahBilangan()">Tambah</button>
+    <p id="hasil">Hasil Tambah Bil 1 + Bil 2</p>
+
+    <script type="text/javascript">
+        function ubahCSS(){
+            document.getElementById("demo").style.fontSize="48px"
+        }
+
+        function hiddenCSS(){
+            document.getElementById("demo").style.display="none"
+        }
+
+        function visible(){
+            document.getElementById("demo").style.display="block"
+        }
+
+        function tambahBilangan(){
+            let bil1=parseFloat(document.getElementById("bil1").value);
+            let bil2=parseFloat(document.getElementById("bil2").value);
+            let total= bil1+bil2;
+            document.getElementById("hasil").innerHTML=total;
+        }
+    </script>
+</body>
+</html>
